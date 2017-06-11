@@ -5,8 +5,12 @@ html
     title Bus Dashboard
     //- link(rel="stylesheet" href="styles/main.css")
     //- link(rel="icon" type="image/x-icon" href="img/favicon.ico")
+    
+    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css")
 
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    link(rel="stylesheet" type="text/css" href="styles/main.css")
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 
     script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js")
 
@@ -33,45 +37,57 @@ html
 
       /////////////////////////////////
 
+
+      //- container for all arrival times
+      var times = [];
+
       function getTimes(){
 
         var APIURL = "http://api.pugetsound.onebusaway.org/api/where/arrivals-and-departures-for-stop/" + stopID+ ".json?key=" + APIKey;
 
         $.ajax({
-        url: APIURL,
-        dataType: 'jsonp',
-        success: function(data){
+          url: APIURL,
+          dataType: 'jsonp',
+          success: function(data){
 
-          var results = _.get(
-              data, 
-              "data.entry.arrivalsAndDepartures", 
-              "FAILED"
-            );
+            var results = _.get(
+                data, 
+                "data.entry.arrivalsAndDepartures", 
+                "FAILED"
+              );
 
-          console.log("got " + results.length + " scheduled arrivals");
+            console.log("got " + results.length + " scheduled arrivals");
 
-          //- container for all arrival times
-          var times = [];
-
-          //- for every entry in scheduled arrivals
-          for(var i = 0; i < results.length; i++){
-            //- get arrival time
-            var arrivalTime = results[i].scheduledArrivalTime;
+            //- for every entry in scheduled arrivals
+            for(var i = 0; i < results.length; i++){
+              //- get arrival time
+              var arrivalTime = results[i].scheduledArrivalTime;
+              
+              //- store arrival time
+              times.push(arrivalTime);
+              
+              //- Log this
+              console.log("bus " + (i+1) + " scheduled for: " + arrivalTime);
+            };
             
-            //- store arrival time
-            times.push(arrivalTime);
-            
-            //- Log this
-            console.log("bus " + (i+1) + " scheduled for: " + arrivalTime);
-          };
-          
-          return times;
-        }
-      });
+            return times;
+          }
+        });
       }
 
-      getTimes();
-
-    style.
+      //- getTimes();
 
   body
+    .wrapper
+      .entry
+        .entry__card
+          .entry__big-time
+            | 10:23:49
+          .entry__details
+            .entry__arrival-time
+              .icon
+              | 12:48
+            .entry__divider
+            .entry__trip-length
+              .icon
+              | 84 Mins

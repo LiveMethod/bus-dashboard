@@ -8,7 +8,7 @@ build:
 	pug ./src --out ./dist
 
 	# Convert less to css
-	# lessc ./src/styles/main.less ./dist/styles/main.css
+	lessc ./src/styles/main.less ./dist/styles/main.css
 
 	# move static assets
 	cp -r ./src/img ./dist
