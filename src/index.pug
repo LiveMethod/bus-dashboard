@@ -15,19 +15,29 @@ html
 
       //- every so often, refersh the page location.reload();
 
+      //- There needs to be a night mode or something that
+      //-  1 - shows that there are no buses upcoming
+      //-  2 - can differentiate between "there are no buses because night" and "there are no buses because the tool failed"
 
-      $(document).ready(function(){
+      // CONFIG ///////////////////////
 
-      });
-
-
-      var APIKey = "TEST"; // note: TEST is actually a valid key heh
+      // API key for Puget Sound onebusaway
+      // https://www.soundtransit.org/Open-Transit-Data
+      // note: TEST is actually a valid key heh
+      var APIKey = "TEST";
       
+      // ID for a stop
+      // Find your stop with a map: http://pugetsound.onebusaway.org/where/standard/index.action
+      // The URL for a stop's time timetable will contain the ID.
       var stopID = "1_36510";
 
-      var APIURL = "http://api.pugetsound.onebusaway.org/api/where/arrivals-and-departures-for-stop/" + stopID+ ".json?key=" + APIKey;
+      /////////////////////////////////
 
-      $.ajax({
+      function getTimes(){
+
+        var APIURL = "http://api.pugetsound.onebusaway.org/api/where/arrivals-and-departures-for-stop/" + stopID+ ".json?key=" + APIKey;
+
+        $.ajax({
         url: APIURL,
         dataType: 'jsonp',
         success: function(data){
@@ -52,15 +62,15 @@ html
             times.push(arrivalTime);
             
             //- Log this
-            console.log("bus " + (i+1) + " scheduled for :" + arrivalTime);
+            console.log("bus " + (i+1) + " scheduled for: " + arrivalTime);
           };
           
-          $( "<ul/>", {
-            "class": "times",
-            html: times.join( " <br/>" )
-          }).appendTo( "body" );
+          return times;
         }
       });
+      }
+
+      getTimes();
 
     style.
 
