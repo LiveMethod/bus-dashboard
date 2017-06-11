@@ -1,0 +1,313 @@
+{
+  "code": 200,
+  "currentTime": 1497218914363,
+  "data": {
+    "entry": {
+      "arrivalsAndDepartures": [
+        {
+          "arrivalEnabled": true,
+          "blockTripSequence": 10,
+          "departureEnabled": true,
+          "distanceFromStop": 2488.8244931773,
+          "frequency": null,
+          "lastUpdateTime": 1497218797000,
+          "numberOfStopsAway": 9,
+          "predicted": true,
+          "predictedArrivalInterval": null,
+          "predictedArrivalTime": 1497219145000,
+          "predictedDepartureInterval": null,
+          "predictedDepartureTime": 1497219145000,
+          "routeId": "1_100024",
+          "routeLongName": "",
+          "routeShortName": "125",
+          "scheduledArrivalInterval": null,
+          "scheduledArrivalTime": 1497218910000,
+          "scheduledDepartureInterval": null,
+          "scheduledDepartureTime": 1497218910000,
+          "serviceDate": 1497164400000,
+          "situationIds": [
+            
+          ],
+          "status": "default",
+          "stopId": "1_36510",
+          "stopSequence": 13,
+          "totalStopsInTrip": 24,
+          "tripHeadsign": "Downtown Seattle South Seattle College",
+          "tripId": "1_33364719",
+          "tripStatus": {
+            "activeTripId": "1_33364719",
+            "blockTripSequence": 10,
+            "closestStop": "1_21350",
+            "closestStopTimeOffset": 39,
+            "distanceAlongTrip": 945.72650629401,
+            "frequency": null,
+            "lastKnownDistanceAlongTrip": 0,
+            "lastKnownLocation": {
+              "lat": 47.52286529541,
+              "lon": -122.35871887207
+            },
+            "lastKnownOrientation": 0,
+            "lastLocationUpdateTime": 1497218797000,
+            "lastUpdateTime": 1497218797000,
+            "nextStop": "1_21350",
+            "nextStopTimeOffset": 39,
+            "orientation": 0.17064962070267,
+            "phase": "in_progress",
+            "position": {
+              "lat": 47.522863213421,
+              "lon": -122.35840284394
+            },
+            "predicted": true,
+            "scheduleDeviation": 235,
+            "scheduledDistanceAlongTrip": 945.72650629401,
+            "serviceDate": 1497164400000,
+            "situationIds": [
+              
+            ],
+            "status": "SCHEDULED",
+            "totalDistanceAlongTrip": 6705.1271981461,
+            "vehicleId": "1_7081"
+          },
+          "vehicleId": "1_7081"
+        },
+        {
+          "arrivalEnabled": true,
+          "blockTripSequence": 12,
+          "departureEnabled": true,
+          "distanceFromStop": 3463.8098760125,
+          "frequency": null,
+          "lastUpdateTime": 1497218739000,
+          "numberOfStopsAway": 14,
+          "predicted": true,
+          "predictedArrivalInterval": null,
+          "predictedArrivalTime": 1497220710000,
+          "predictedDepartureInterval": null,
+          "predictedDepartureTime": 1497220710000,
+          "routeId": "1_100024",
+          "routeLongName": "",
+          "routeShortName": "125",
+          "scheduledArrivalInterval": null,
+          "scheduledArrivalTime": 1497220710000,
+          "scheduledDepartureInterval": null,
+          "scheduledDepartureTime": 1497220710000,
+          "serviceDate": 1497164400000,
+          "situationIds": [
+            
+          ],
+          "status": "default",
+          "stopId": "1_36510",
+          "stopSequence": 13,
+          "totalStopsInTrip": 24,
+          "tripHeadsign": "Downtown Seattle South Seattle College",
+          "tripId": "1_33364720",
+          "tripStatus": {
+            "activeTripId": "1_33364692",
+            "blockTripSequence": 11,
+            "closestStop": "1_39976",
+            "closestStopTimeOffset": 0,
+            "distanceAlongTrip": 20830.33032218,
+            "frequency": null,
+            "lastKnownDistanceAlongTrip": 0,
+            "lastKnownLocation": {
+              "lat": 47.5244140625,
+              "lon": -122.36452484131
+            },
+            "lastKnownOrientation": 0,
+            "lastLocationUpdateTime": 1497218739000,
+            "lastUpdateTime": 1497218739000,
+            "nextStop": "1_39976",
+            "nextStopTimeOffset": 0,
+            "orientation": 270,
+            "phase": "in_progress",
+            "position": {
+              "lat": 47.524418130985,
+              "lon": -122.364525
+            },
+            "predicted": true,
+            "scheduleDeviation": 0,
+            "scheduledDistanceAlongTrip": 20830.33032218,
+            "serviceDate": 1497164400000,
+            "situationIds": [
+              
+            ],
+            "status": "SCHEDULED",
+            "totalDistanceAlongTrip": 20830.344887112,
+            "vehicleId": "1_7117"
+          },
+          "vehicleId": "1_7117"
+        }
+      ],
+      "nearbyStopIds": [
+        "1_36170"
+      ],
+      "situationIds": [
+        
+      ],
+      "stopId": "1_36510"
+    },
+    "references": {
+      "agencies": [
+        {
+          "disclaimer": "",
+          "email": "",
+          "fareUrl": "",
+          "id": "1",
+          "lang": "EN",
+          "name": "Metro Transit",
+          "phone": "206-553-3000",
+          "privateService": false,
+          "timezone": "America\/Los_Angeles",
+          "url": "http:\/\/metro.kingcounty.gov"
+        }
+      ],
+      "routes": [
+        {
+          "agencyId": "1",
+          "color": "",
+          "description": "Westwood Village to SSC to Downtown Seattle",
+          "id": "1_100024",
+          "longName": "",
+          "shortName": "125",
+          "textColor": "",
+          "type": 3,
+          "url": "http:\/\/metro.kingcounty.gov\/schedules\/125\/n0.html"
+        },
+        {
+          "agencyId": "1",
+          "color": "",
+          "description": "Southcenter\/S Seattle Coll\/Alaska Junc\/Admirl Dist",
+          "id": "1_100026",
+          "longName": "",
+          "shortName": "128",
+          "textColor": "",
+          "type": 3,
+          "url": "http:\/\/metro.kingcounty.gov\/schedules\/128\/n0.html"
+        },
+        {
+          "agencyId": "1",
+          "color": "",
+          "description": "Westwood Village to Shorewood to Gatewood to Alask",
+          "id": "1_100111",
+          "longName": "",
+          "shortName": "22",
+          "textColor": "",
+          "type": 3,
+          "url": "http:\/\/metro.kingcounty.gov\/schedules\/022\/n0.html"
+        },
+        {
+          "agencyId": "1",
+          "color": "",
+          "description": "Westwood Village to Georgetown to Broadway",
+          "id": "1_100249",
+          "longName": "",
+          "shortName": "60",
+          "textColor": "",
+          "type": 3,
+          "url": "http:\/\/metro.kingcounty.gov\/schedules\/060\/n0.html"
+        }
+      ],
+      "situations": [
+        
+      ],
+      "stops": [
+        {
+          "code": "36510",
+          "direction": "N",
+          "id": "1_36510",
+          "lat": 47.543026,
+          "locationType": 0,
+          "lon": -122.354813,
+          "name": "16th Ave SW & SW Holly St",
+          "routeIds": [
+            "1_100024",
+            "1_100026"
+          ],
+          "wheelchairBoarding": "UNKNOWN"
+        },
+        {
+          "code": "21350",
+          "direction": "N",
+          "id": "1_21350",
+          "lat": 47.523144,
+          "locationType": 0,
+          "lon": -122.355003,
+          "name": "16th Ave SW & SW Henderson St",
+          "routeIds": [
+            "1_100024",
+            "1_100026"
+          ],
+          "wheelchairBoarding": "UNKNOWN"
+        },
+        {
+          "code": "39976",
+          "direction": "S",
+          "id": "1_39976",
+          "lat": 47.524414,
+          "locationType": 0,
+          "lon": -122.364632,
+          "name": "25th Ave SW & SW Trenton St",
+          "routeIds": [
+            "1_100111",
+            "1_100249",
+            "1_100024"
+          ],
+          "wheelchairBoarding": "UNKNOWN"
+        },
+        {
+          "code": "36170",
+          "direction": "S",
+          "id": "1_36170",
+          "lat": 47.54282,
+          "locationType": 0,
+          "lon": -122.355034,
+          "name": "16th Ave SW & SW Holly St",
+          "routeIds": [
+            "1_100024",
+            "1_100026"
+          ],
+          "wheelchairBoarding": "UNKNOWN"
+        }
+      ],
+      "trips": [
+        {
+          "blockId": "1_4447958",
+          "directionId": "1",
+          "id": "1_33364719",
+          "routeId": "1_100024",
+          "routeShortName": "",
+          "serviceId": "1_23909",
+          "shapeId": "1_10125038",
+          "timeZone": "",
+          "tripHeadsign": "Downtown Seattle South Seattle College",
+          "tripShortName": "LOCAL"
+        },
+        {
+          "blockId": "1_4447956",
+          "directionId": "1",
+          "id": "1_33364720",
+          "routeId": "1_100024",
+          "routeShortName": "",
+          "serviceId": "1_23909",
+          "shapeId": "1_10125038",
+          "timeZone": "",
+          "tripHeadsign": "Downtown Seattle South Seattle College",
+          "tripShortName": "LOCAL"
+        },
+        {
+          "blockId": "1_4447956",
+          "directionId": "0",
+          "id": "1_33364692",
+          "routeId": "1_100024",
+          "routeShortName": "",
+          "serviceId": "1_23909",
+          "shapeId": "1_21125037",
+          "timeZone": "",
+          "tripHeadsign": "Downtown Seattle South Seattle College",
+          "tripShortName": "LOCAL"
+        }
+      ]
+    }
+  },
+  "text": "OK",
+  "version": 2
+}
