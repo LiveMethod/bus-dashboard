@@ -6,8 +6,13 @@ html
     //- link(rel="stylesheet" href="styles/main.css")
     //- link(rel="icon" type="image/x-icon" href="img/favicon.ico")
     
+    //- Reset CSS
     link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css")
 
+    //- Fonts
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900" rel="stylesheet")
+
+    //- Custom CSS
     link(rel="stylesheet" type="text/css" href="styles/main.css")
 
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
@@ -85,9 +90,9 @@ html
             | 10:23:49
           .entry__details
             .entry__arrival-time
-              .icon
+              img.icon(src="img/icons/clock.svg")
               | 12:48
             .entry__divider
             .entry__trip-length
-              .icon
+              img.icon(src="img/icons/hourglass.svg")
               | 84 Mins

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="49px" height="66px" viewBox="0 0 49 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/hourglass</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons/hourglass" stroke="#979797" stroke-width="6">
+            <g id="Group" transform="translate(3.000000, 3.000000)">
+                <rect id="Rectangle-4-Copy" x="0" y="49.5483871" width="43" height="10.4516129" rx="5.22580645"></rect>
+                <path d="M39.4977376,48.1935484 C39.4977376,38.2524229 31.39632,30.1935484 21.4027149,30.1935484 C11.4091099,30.1935484 3.30769231,38.2524229 3.30769231,48.1935484 C3.55090498,48.4899194 40.0388857,48.7106855 39.4977376,48.1935484 Z" id="Oval-2"></path>
+                <rect id="Rectangle-4-Copy-2" transform="translate(21.500000, 5.225806) rotate(-180.000000) translate(-21.500000, -5.225806) " x="0" y="0" width="43" height="10.4516129" rx="5.22580645"></rect>
+                <path d="M39.6923077,29.6129032 C39.6923077,19.6717777 31.5908901,11.6129032 21.5972851,11.6129032 C11.60368,11.6129032 3.50226244,19.6717777 3.50226244,29.6129032 C3.74547511,29.9092742 40.2334559,30.1300403 39.6923077,29.6129032 Z" id="Oval-2-Copy" transform="translate(21.600265, 20.768149) rotate(-180.000000) translate(-21.600265, -20.768149) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
