@@ -15,8 +15,10 @@ html
     //- Custom CSS
     link(rel="stylesheet" type="text/css" href="styles/main.css")
 
+    //- jQuery
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
 
+    //- Lodash for object traversal
     script(src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js")
 
     script.
@@ -62,7 +64,9 @@ html
               );
 
             console.log("got " + results.length + " scheduled arrivals");
-
+            
+            //- erase the previous times array
+            times = [];
             //- for every entry in scheduled arrivals
             for(var i = 0; i < results.length; i++){
               //- get arrival time
@@ -74,25 +78,90 @@ html
               //- Log this
               console.log("bus " + (i+1) + " scheduled for: " + arrivalTime);
             };
-            
-            return times;
           }
         });
       }
 
-      //- getTimes();
+      //- Milliseconds to normal time
+      function prettyTime(milliTime) {
+        var tempTime = new Date(milliTime);
+        var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        var year = tempTime.getFullYear();
+        var month = months[tempTime.getMonth()];
+        var date = tempTime.getDate();
+        var hour = tempTime.getHours();
+        var min = tempTime.getMinutes();
+        var sec = tempTime.getSeconds();
+        var fullTime = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+        var shortTime = hour + ':' + min + ':' + sec;
+        return fullTime;
+      }
+
+      //- Format the countdown
+      function getCountdown(distance){
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          //- quick hack to make "9" appear as "09"
+          var paddedMinutes = ("0" + minutes).slice(-2);
+          var paddedSeconds = ("0" + seconds).slice(-2);
+
+          var stringToReturn = "";
+
+          //- Hours should only appear if there's one or more of them
+          //- (in practice, this is never, since the OneBusAway API only looks 30m ahead)
+          if (hours > 0) { stringToReturn = stringToReturn + (hours + " : ") };
+
+          stringToReturn = stringToReturn + paddedMinutes + " : " + paddedSeconds;
+
+          return stringToReturn;
+      }
+
+      function updateGUI(){
+        times.forEach(function(time, index) {
+          //- make a card
+          var targetDate = times[index];
+          var now = new Date().getTime();
+          var distance = targetDate - now;
+
+          console.log('target: ' + prettyTime(targetDate))
+          console.log('now: ' + prettyTime(now))
+          console.log('distance: '  + getCountdown(distance));
+
+          
+          //- for entry at index, give countdown
+          $('.entry').eq(index).removeClass('hidden').find('.entry__big-time').html(getCountdown(distance));
+        });
+
+        //- hide entries past the length of the times we have
+        $('.entry').slice(times.length).addClass('hidden');
+      }
+
+      var updateCycle = setInterval(function() {
+          updateGUI();
+      }, 1000);
+
+
+      //- initialize with times
+      //- TODO: make this refresh later somehow
+      getTimes();
 
   body
+    //- This is so hacky:
+    //- Rather than writing this whole big thing as html in jquery,
+    //- There are 3 cards premade that only need to be shown and updated by jquery.
+    //- It's dirty, but... also clean?
     .wrapper
-      .entry
+      .entry.hidden
         .entry__card
           .entry__big-time
-            | 10:23:49
+            | 00:00:00
           .entry__details
             .entry__arrival-time
               img.icon(src="img/icons/clock.svg")
-              | 12:48
+              | 00:00
             .entry__divider
             .entry__trip-length
               img.icon(src="img/icons/hourglass.svg")
-              | 84 Mins
+              | 30 Mins
